@@ -14,12 +14,14 @@
     <title>Our nice page</title>
 </head>
 
-<body class="content">
+<body class="content ">
     <!-- modal ... are hidden by default ... use javascript to display/hide them -->
     <div class="modal" id="signupmodal">
-        <div class="modal-background" id="signupbg"></div>
+        <div class="modal-background " id="signupbg"></div>
         <div class="modal-content p-6 has-background-white">
-            <h1>Sign Up!</h1>
+            <h1 class = "has-text-centered is-size-3" >Sign Up today! </h1>
+            <p class = "has-text-centered is-size-3"> Start writing your scholarship essays with <span class = "has-text-weight-bold is-italic">confidence!</span> </p>
+            
             <form>
                 <!-- First Name -->
                 <div class="field">
@@ -44,19 +46,21 @@
                 </div>
                 <!-- Password -->
                 <div class="field">
-                    <label class="label">Passowrd</label>
+                    <label class="label">Password</label>
                     <div class="control">
                         <input type="password">
                     </div>
                 </div>
-                <!-- Major -->
+                <!-- school -->
                 <div class="field">
-                    <label class="label">Major</label>
+                    <label class="label">I am a </label>
                     <div class="control">
                         <div class="select">
                             <select>
-                                <option>IS</option>
-                                <option>Finance</option>
+                                <option>High school student </option>
+                                <option>Undergraduate student</option>
+                                <option>Grad student  </option>
+                                <option>Others </option>
                             </select>
                         </div>
                     </div>
@@ -73,17 +77,51 @@
                 <div class="field">
                     <div class="control">
                         <button class="m-3 button is-link">Submit</button>
+                        <button class="m-3 button is-link">Refresh</button>
                     </div>
                 </div>
+
+              
 
             </form>
         </div>
     </div>
 
+    <!-- sign in modal  -->
     <div class="modal" id="signinmodal">
         <div class="modal-background" id="signinbg"></div>
         <div class="modal-content p-6 has-background-white">
             <h1>Sign In!</h1>
+            <form>
+                <!-- Email -->
+                <div class="field has-background-primary-light">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input type="email">
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="field has-background-primary-light">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input type="password">
+                    </div>
+                </div>
+                <!-- submit -->
+                <div class="field has-background-primary-light">
+                    <div class="control">
+                        <button class="m-3 button is-link">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- contact us modal -->
+    <div class="modal " id="contactusmodal">
+        <div class="modal-background" id="contactusbg"></div>
+        <div class="modal-content p-6 has-background-white">
+            <h1>contact us </h1>
             <form>
                 <!-- Email -->
                 <div class="field">
@@ -188,30 +226,31 @@
     </div>
 
     <!-- tables -->
-    <div class="section TB has-background-danger-dark">
-        <div class="container">
+    <div class="section TB " style = "background-color: cornflowerblue;">
+                            <!-- this will give css higher presendence than bulma -->
+        <div class="container " >
             <div class="table has-text-centered is-size-1">
-                <table class="table has-text-centered" >
-                    <thead class = "has-text-centered ">Why we work? </thead>
+                <table class="table has-text-centered " >
+                    <thead class = "has-text-centered">Why  we work? </thead>
                     <tbody>
-                        <tr class = "is-size-4 has-text-centered has-background-primary-light">
+                        <tr class = "has-text-weight-bold is-size-4 has-text-centered has-background-primary-light">
                             <td>1. Simple to navagiate </td>
                             <td>2. Save and Reuse </td>
                             <td>3. Personalized Materials  </td>
                         </tr>
                         <tr class = "is-size-5 p-5">
-                            <td class = "font-awsome"> We offer clear videos that will guide you through each step of the writing process so you don’t have to stress on your own! 
-                            <p><i class=" mt-5 fas fa-user-check"></i></p>
+                            <td class = "font-awsome"> We offer <span class = "has-background-seconday">clear</span> videos that will guide you through each step of the writing process so you don’t have to stress on your own! 
+                            <p><i class=" fa-7x mt-5 fas fa-user-check"></i></p>
                             </td>
                             <td>
                                 We save all of your progress and work so that you can re-use, save time, and apply to many scholarships 
                                 <p>
-                                    <i class="mt-5 fas fa-history"></i>
+                                    <i class=" fa-7x mt-5 fas fa-history"></i>
                                 </p>
                             </td>
                             <td>
                                 We leverage past student experiences to offer insightful advice on how to write successful essays. 
-                                <p><i class=" mt-5 fas fa-chalkboard-teacher"></i></p>
+                                <p><i class=" fa-7x mt-5 fas fa-chalkboard-teacher"></i></p>
                             </td>
                         </tr>
 
@@ -346,6 +385,25 @@
         signinbg.addEventListener('click', function () {
             signinmodal.classList.remove('is-active');
         })
+
+        //contact us modal
+        // grab the button
+        var contactus = document.querySelector("#contactus");
+        // attach a click event
+        contactus.addEventListener('click', function () {
+            //grab the modal
+            var contactusmodal = document.querySelector("#contactusmodal");
+            // add the is-active class to show the modal
+            contactusmodal.classList.add('is-active');
+        })
+        // attach event on modal-background
+        // grab the modal background
+        var contactusbg = document.querySelector("#contactusbg");
+        contactusbg.addEventListener('click', function () {
+            contactusmodal.classList.remove('is-active');
+        })
+
+
     </script>
 
 </body>

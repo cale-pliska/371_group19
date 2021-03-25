@@ -1,0 +1,475 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bulma CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <title>Scholarship Helper</title>
+</head>
+
+<body class="content ">
+    <script>
+
+    </script>
+    <!-- modal ... are hidden by default ... use javascript to display/hide them -->
+    <div class="modal" id="signupmodal"  style="color: darkblue;"  >
+        <div class="modal-background " id="signupbg"></div>
+        <div class="modal-content p-6 m-0 " style = "background-color: #d6eff9; border:0.5rem solid darkblue; border-radius: 50px;">
+            <h1 class = "has-text-centered is-size-3"  style="color: darkblue;" >Sign Up today! 
+            </h1>
+            <p class = "has-text-centered is-size-3"> Start writing your scholarship essays with <span class = "has-text-weight-bold is-italic">confidence! 	&nbsp;&nbsp;&nbsp;<i class="fas fa-user-check fa-2x"
+                style="color: darkblue;"></i> 
+               
+            </span> 
+   
+            </p>
+
+            
+           
+
+            
+            <form>
+                <!-- First Name -->
+                <div class="field" >
+                    <label class=" darkblue label">First Name</label>
+                    <div class="control">
+                        <input type="text">
+                    </div>
+                </div>
+                <!-- Last Name -->
+                <div class="field">
+                    <label class="label">Last Name</label>
+                    <div class="control">
+                        <input type="text">
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input type="email">
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input type="password">
+                    </div>
+                </div>
+                <!-- school -->
+                <div class="field">
+                    <label class="label">I am a </label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option>High school student </option>
+                                <option>Undergraduate student</option>
+                                <option>Grad student  </option>
+                                <option>Others </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--Past experience  -->
+                <div class="field">
+                    <label class="label">I need help with:  </label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option>Finding scholarships </option>
+                                <option>Writing my essays </option>
+                                <option>Tailoring my responses</option>
+                                <option>Others </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- submit -->
+                <div class="field">
+                    <div class="control">
+                        <button class="m-3 button is-link">Submit</button>
+                        <button class="m-3 button is-link">Refresh</button>
+                    </div>
+                </div>
+
+              
+
+            </form>
+        </div>
+    </div>
+
+    <!-- sign in modal  -->
+    <div class="modal" id="signinmodal" >
+
+        
+        <div class="modal-background" id="signinbg"><img src="Welcome.png" alt="welcome back" style ="height:40%; margin-top: 5rem; margin-right:1rem;">
+        </div>
+        
+        <div class="modal-content p-6 "  style = "background-color: #d6eff9; border:0.5rem solid darkblue; border-radius: 50px;">
+            <h1 style="text-align: center;">Ready to start your Scholarship Journey? 
+
+              
+            </h1>
+            
+              
+            </h6>
+            
+           
+            
+            <form>
+                <!-- Email -->
+                <div class="field ">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input type="email">
+                       
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="field ">
+                    <label class="label">Password
+                    </label>
+                    <div class="control">
+                        <input type="password">
+                        
+                    </div>
+                </div>
+                
+                <!-- submit -->
+                <div class="field ">
+                    <div class="control">
+                        <button class="m-3 button is-link">Submit
+                            
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        
+    </div>
+
+    <!-- contact us modal -->
+    <div class="modal" id="contactusmodal">
+        <div class="modal-background" id="contactusbg"></div>
+        <div class="modal-content p-6 " style = "color:darkblue; background-color: #d6eff9; border:0.5rem solid; border-radius: 50px; ">
+            <h1>Connect With Us! <i class=" fa-pull-right  fa-3x far fa-comments" style="color: darkblue;"></i></h1>
+            
+            <form >
+                <!-- Name -->
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input type="email">
+                    </div>
+                </div>
+                 <!-- Email -->
+                 <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input type="email">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <textarea class="textarea"
+                        placeholder="Textarea">Write us a message here!</textarea>
+                </div>
+
+                <!-- submit -->
+                <div class="field">
+                    <div class="control">
+                        <button class="m-3 button is-link">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- navigation bar -->
+    <div class="navbar is-primary" style="background-color: #1d9fd6">
+        <div class="navbar-brand">
+            <div class="navbar-item has-text-weight-bold is-size-1-desktop is-size-1-mobile is-size-1-tablet">
+                <!-- logo -->
+                <a href="#" style="color: white;">Scholarship Helper
+                    <i class="fas fa-award"></i>
+                    
+                </a>
+            </div>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-menu is-active" >
+            <div class="navbar-end has-text-weight-bold" style = "background-color: #1d9fd6;">
+                <div class="navbar-item is-size-5-desktop">
+                    <a id="signup" style="color: white;">Sign-Up</a>
+                </div>
+                <div class="navbar-item is-size-5-desktop">
+                    <a id="signin" style="color: white;">Sign-In</a>
+                </div>
+                <div class="navbar-item is-size-5-desktop">
+                    <a id="contactus" style="color: white;">Contact Us</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- columns -->
+    <!-- put everything in section and container to adjust padding and margin -->
+    <div class=" section has-background-primary-light">
+        <div class="container ">
+            <!-- default columns take whole size 12 -->
+            <div class="columns">
+                <!-- main content -->
+                <div class="column is-8  p-6 ">
+                    <h1>Welcome to Scholarship Helper!</h1>
+                    <p class = "is-size-3">Applying for  scholarships is <span class = "bold is-size-2 has-text-weight-bold">stressful</span>. We want to help you!                     </p>
+                    <p class="mt-2 is-size-4 mb-6">
+                        With Scholarship Helper, you will learn to write <span class = "is-uppercase is-italic">polished, tailored, and eye-watching </span>  scholarship essays. 
+                       
+                    </p>
+
+                    <p class = "is-size-3-desktop is-size-3-mobile is-size-1-tablet has-text-centered"> Scholarship Helper is designed <span class="has-text-weight-bold is-size-3-desktop"> BY </span>Students 
+                        <span class="has-text-weight-bold is-size-3-desktop"> FOR</span>  Students. 
+                        
+                </div>
+
+              
+                <!-- related content -->
+                <div class="column is-4 has-background-seconday p-2">
+                    <!-- message for user contact us -->
+                    <form>
+                        <div class="message">
+                            <div class="message-header">
+                                Send us a message!
+                            </div>
+                            <div class="message-body">
+                                <!-- Email -->
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control">
+                                        <input style="width: 100%;" type="email">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <textarea class="textarea"
+                                        placeholder="Textarea">Write us a message here!</textarea>
+                                </div>
+                                <!-- form buttons -->
+                                <!-- submit -->
+                                <input type="reset" value="Submit">
+                                <!-- reset -->
+                                <input type="reset">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tables -->
+    <div class="section TB " style = "background-color: cornflowerblue;">
+                            <!-- this will give css higher presendence than bulma -->
+        <div class="container " >
+            <div class="table has-text-centered is-size-1">
+                <table class="table has-text-centered " >
+                    <thead class = "has-text-centered">Why  we work? </thead>
+                    <tbody>
+                        <tr class = "has-text-weight-bold is-size-4 has-text-centered has-background-primary-light">
+                            <td>1. Simple to navagiate </td>
+                            <td>2. Save and Reuse </td>
+                            <td>3. Personalized Materials  </td>
+                        </tr>
+                        <tr class = "is-size-5 p-5">
+                            <td class = "font-awsome"> We offer <span class = "has-background-seconday">clear</span> videos that will guide you through each step of the writing process so you don’t have to stress on your own! 
+                            <p><i class=" fa-7x mt-5 fas fa-user-check"></i></p>
+                            </td>
+                            <td>
+                                We save all of your progress and work so that you can re-use, save time, and apply to many scholarships 
+                                <p>
+                                    <i class=" fa-7x mt-5 fas fa-history"></i>
+                                </p>
+                            </td>
+                            <td>
+                                We leverage past student experiences to offer insightful advice on how to write successful essays. 
+                                <p><i class=" fa-7x mt-5 fas fa-chalkboard-teacher"></i></p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+   
+
+    <!-- bottom section header with testimonials, faqs, and how to use -->
+    <div class="section">
+        <div class="container">
+            <!-- tabs -->
+            <div class="tabs" >
+                <ul>
+                    <li class="is-active"><a>User Testimonials</a></li>
+                    <li><a>How to Use</a></li>
+                    <li><a>FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="title is-size-5 has-text-centered">
+                    Hear from past users on how they used Scholarship Helper! 
+                </h1>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- cards -->
+    <div class="section ">
+        <div class="container ">
+            <div class="columns">
+                
+                <!-- first card -->
+                <div class="column is-4">
+                    <div class="card" style = "height:30rem;">
+                        <div class="card-image has-text-centered" >
+                            <img src="user_3.png" alt="" style = "border: 1rem solid lightblue; ">
+                        </div>
+                        <div class="card-content" style = "margin:0 auto;" >
+                            <p> "Scholarship Helper has helped me so much with my scholarship applications! Ever since I have been using Scholarship Helper, almost all of my scholarship essays has been successful.” 
+                            </p>
+                            <div class="has-text-centered">
+                                <button class="button">Read more on Alex's story</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- second card -->
+                <div class="column is-4">
+                    <div class="card" style = "height:30rem;">
+                        <div class="card-image has-text-centered" style = "height:50%;">
+                            <img src="User_2.png" alt="past user image" style = "border: 1rem solid lightblue;  ">
+                        </div>
+                        <div class="card-content" style = "margin:0 auto;">
+                            <p></p>
+                            <p>“In the past year that I have been using Scholarship Helper, the financial pressure that I felt has significantly lessened!” 
+                            </p>
+                            <div class="has-text-centered">
+                                <button class="button">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- third card -->
+                <div class="column is-4">
+                    <div class="card" style = "height:30rem; ">
+                        <div class="card-image has-text-centered">
+                            <img src="User_1.png" alt=""  style = "border: 1rem solid lightblue">
+                        </div>
+                        <div class= "card-content" style = "margin:0 auto;">
+                            <p></p>
+                            <p>“In the past year that I have been using Scholarship Helper, the financial pressure that I felt has significantly lessened!” 
+                            </p>
+                            <div class="has-text-centered">
+                                <button class="button">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="content has-text-centered">
+            <p>Connect with us on Social Media! </p>
+            <a href="http://www.facebook.com"><i class="fab fa-2x fa-facebook-f"></i></a>
+            <a href="http://www.twitter.com"></a><i class="ml-2 fab fa-2x fa-twitter"></i></a>
+
+        </div>
+    </div>
+
+
+    <!-- javascript -->
+    <script>
+        //signup modal
+        // grab the button
+        var signup = document.querySelector("#signup");
+        // attach a click event
+        signup.addEventListener('click', function () {
+            //grab the modal
+            var signupmodal = document.querySelector("#signupmodal");
+            // add the is-active class to show the modal
+            signupmodal.classList.add('is-active');
+        })
+        // attach event on modal-background
+        // grab the modal background
+        var signupbg = document.querySelector("#signupbg");
+        signupbg.addEventListener('click', function () {
+            signupmodal.classList.remove('is-active');
+        })
+
+        //signin modal
+        // grab the button
+        var signin = document.querySelector("#signin");
+        // attach a click event
+        signin.addEventListener('click', function () {
+            //grab the modal
+            var signinmodal = document.querySelector("#signinmodal");
+            // add the is-active class to show the modal
+            signinmodal.classList.add('is-active');
+        })
+        // attach event on modal-background
+        // grab the modal background
+        var signinbg = document.querySelector("#signinbg");
+        signinbg.addEventListener('click', function () {
+            signinmodal.classList.remove('is-active');
+        })
+
+        //contact us modal
+        // grab the button
+        var contactus = document.querySelector("#contactus");
+        // attach a click event
+        contactus.addEventListener('click', function () {
+            //grab the modal
+            var contactusmodal = document.querySelector("#contactusmodal");
+            // add the is-active class to show the modal
+            contactusmodal.classList.add('is-active');
+        })
+        // attach event on modal-background
+        // grab the modal background
+        var contactusbg = document.querySelector("#contactusbg");
+        contactusbg.addEventListener('click', function () {
+            contactusmodal.classList.remove('is-active');
+        })
+
+
+    </script>
+
+</body>
+
+</html>

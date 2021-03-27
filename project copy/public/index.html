@@ -231,12 +231,44 @@
 
     <!-- columns -->
     <!-- put everything in section and container to adjust padding and margin -->
-    <div class=" section has-background-primary-light">
-        <div class="container ">
+    <div class=" section">
+        <div class="container">
             <!-- default columns take whole size 12 -->
-            <div class="columns">
+            <div class="columns" style="padding-bottom: 2em;">
+
+                <!-- side navbar -->
+                <aside class="column is-3 is-narrow-mobile is-fullheight"
+                    style="background-color: rgba(112, 199, 228, 0.268)">
+                    <p class="menu-label is-hidden-touch">Content Navigation</p>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#" class="">
+                                <span class="icon"><i class="fa fa-home"></i></span> Intro
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                <span class="icon"><i class="fa fa-table"></i></span> Modual 1
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small"><i class="fa fa-link"></i></span> Modual 2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small"><i class="fa fa-link"></i></span> Modual 3
+                                    </a>
+                                </li>
+                            </ul>
+                    </ul>
+                </aside>
+
+
                 <!-- main content -->
-                <div class="column is-8  p-6 ">
+                <div class="column is-9  p-6 ">
                     <h1>Welcome to Scholarship Helper!</h1>
                     <p class="is-size-3">Applying for scholarships is <span
                             class="bold is-size-2 has-text-weight-bold">stressful</span>. We want to help you! </p>
@@ -251,38 +283,37 @@
                         <span class="has-text-weight-bold is-size-3-desktop"> FOR</span> Students.
 
                 </div>
-
-
-                <!-- related content -->
-                <div class="column is-4 has-background-seconday p-2">
-                    <!-- message for user contact us -->
-                    <form>
-                        <div class="message">
-                            <div class="message-header">
-                                Send us a message!
-                            </div>
-                            <div class="message-body">
-                                <!-- Email -->
-                                <div class="field">
-                                    <label class="label">Email</label>
-                                    <div class="control">
-                                        <input style="width: 100%;" type="email">
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <textarea class="textarea"
-                                        placeholder="Textarea">Write us a message here!</textarea>
-                                </div>
-                                <!-- form buttons -->
-                                <!-- submit -->
-                                <input type="reset" value="Submit">
-                                <!-- reset -->
-                                <input type="reset">
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
+
+            <!-- message box -->
+            <div class="has-background-seconday p-2">
+                <!-- message for user contact us -->
+                <form>
+                    <div class="message">
+                        <div class="message-header">
+                            Send us a message!
+                        </div>
+                        <div class="message-body">
+                            <!-- Email -->
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control">
+                                    <input style="width: 100%;" type="email">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <textarea class="textarea" placeholder="Textarea">Write us a message here!</textarea>
+                            </div>
+                            <!-- form buttons -->
+                            <!-- submit -->
+                            <input type="reset" value="Submit">
+                            <!-- reset -->
+                            <input type="reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
 
